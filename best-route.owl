@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#"
+     xml:base="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:best-route="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route">
+        <owl:versionIRI rdf:resource="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route/1.0.1"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#calcule -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#calcule">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#Provider"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#Route"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#lat_destination -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#lat_destination">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#RouteCalculationService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#lat_origin -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#lat_origin">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#RouteCalculationService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#lon_destination -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#lon_destination">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#RouteCalculationService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#lon_origin -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#lon_origin">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#RouteCalculationService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#BestETA -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#BestETA">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#Route"/>
+        <owl:disjointWith rdf:resource="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#Provider"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#Provider -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#Provider">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#RouteCalculationService"/>
+        <rdfs:comment>Proveedor de Api (Google Maps o Bing Maps)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#Route -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#Route"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#RouteCalculationService -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#RouteCalculationService"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#BestBmaps -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#BestBmaps">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#BestETA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#BestGmaps -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#BestGmaps">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#BestETA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#BingMaps -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#BingMaps">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#Provider"/>
+        <calcule rdf:resource="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#BestBmaps"/>
+        <lat_destination rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.603062</lat_destination>
+        <lat_origin rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.682487</lat_origin>
+        <lon_destination rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.065258</lon_destination>
+        <lon_origin rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.120194</lon_origin>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#GoogleMaps -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#GoogleMaps">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#Provider"/>
+        <calcule rdf:resource="https://raw.githubusercontent.com/raulgomezn/parking-streaming/master/best-route#BestGmaps"/>
+        <lat_destination rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.603062</lat_destination>
+        <lat_origin rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.682487</lat_origin>
+        <lon_destination rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.065258</lon_destination>
+        <lon_origin rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.120194</lon_origin>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
