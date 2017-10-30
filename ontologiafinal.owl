@@ -1,0 +1,559 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ca.mendoza968/ontologies/services#"
+     xml:base="http://www.semanticweb.org/ca.mendoza968/ontologies/services"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:services="http://www.semanticweb.org/ca.mendoza968/ontologies/services#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#aboutProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#aboutProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Service"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#hasAPIURL -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#hasAPIURL">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Service"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#URL"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#hasBodyField -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#hasBodyField">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Method"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#BodyField"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#hasDataType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#hasDataType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Parameter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#DataType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#hasMethod -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#hasMethod">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Service"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Method"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#hasStringValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#hasStringValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#URL"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#BodyField -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#BodyField">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Parameter"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#PathParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#Create -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Create">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Method"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#DataType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#DataType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#Delete -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Delete">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Method"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#Method -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Method">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Reference"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#Parameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Parameter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#PathParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#PathParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#Property -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Property"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#Read -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Read">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Method"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#Reference -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Reference"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Service"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#URL -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#URL">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Reference"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#Update -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Update">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Method"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#Apixu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Apixu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Property"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apixu</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#ApixuAPI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#ApixuAPI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#URL"/>
+        <hasStringValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://api.apixu.com/v1/current.json?key={0}&amp;q={1},{2}</hasStringValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#ApixuService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#ApixuService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Service"/>
+        <aboutProperty rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Apixu"/>
+        <hasAPIURL rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#ApixuAPI"/>
+        <hasMethod rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#GET_Apixu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#Bmaps -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Bmaps">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Property"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bmaps</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#BmapsAPI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#BmapsAPI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#URL"/>
+        <hasStringValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://dev.virtualearth.net/REST/v1/Routes/DistanceMatrix?origins={0},{1}&amp;destinations={2},{3}&amp;travelMode={4}&amp;key={5}</hasStringValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#BmapsService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#BmapsService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Service"/>
+        <aboutProperty rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Bmaps"/>
+        <hasAPIURL rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#BmapsAPI"/>
+        <hasMethod rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#GET_Bmaps"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#Decimal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Decimal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#DataType"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decimal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#Foursquare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Foursquare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Property"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foursquare</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#FoursquareAPI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#FoursquareAPI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#URL"/>
+        <hasStringValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://api.foursquare.com/v2/venues/{0}?client_secret={1}&amp;client_id={2}&amp;v={3}</hasStringValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#FoursquareService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#FoursquareService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Service"/>
+        <aboutProperty rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Foursquare"/>
+        <hasAPIURL rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#FoursquareAPI"/>
+        <hasMethod rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#GET_Foursquare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#GET_Apixu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#GET_Apixu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Read"/>
+        <hasBodyField rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Latitude"/>
+        <hasBodyField rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Longitude"/>
+        <hasStringValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BestWeather</hasStringValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#GET_Bmaps -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#GET_Bmaps">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Read"/>
+        <hasBodyField rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Latitude"/>
+        <hasBodyField rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Latitude_Destination"/>
+        <hasBodyField rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Longitude"/>
+        <hasBodyField rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Longitude_Destination"/>
+        <hasStringValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BestRoad</hasStringValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#GET_Foursquare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#GET_Foursquare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Read"/>
+        <hasBodyField rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Value"/>
+        <hasStringValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BestPlace</hasStringValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#GET_Gmaps -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#GET_Gmaps">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Read"/>
+        <hasBodyField rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Latitude"/>
+        <hasBodyField rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Latitude_Destination"/>
+        <hasBodyField rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Longitude"/>
+        <hasBodyField rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Longitude_Destination"/>
+        <hasStringValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BestRoad</hasStringValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#GET_Gplaces -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#GET_Gplaces">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Read"/>
+        <hasBodyField rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Value"/>
+        <hasStringValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BestPlace</hasStringValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#GET_Openweather -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#GET_Openweather">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Read"/>
+        <hasBodyField rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Latitude"/>
+        <hasBodyField rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Longitude"/>
+        <hasStringValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BestWeather</hasStringValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#Gmaps -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Gmaps">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Property"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gmaps</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#GmapsAPI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#GmapsAPI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#URL"/>
+        <hasStringValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://maps.googleapis.com/maps/api/distancematrix/json?origins={0},{1}&amp;destinations={2},{3}&amp;mode={4}&amp;key={5}</hasStringValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#GmapsService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#GmapsService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Service"/>
+        <aboutProperty rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Gmaps"/>
+        <hasAPIURL rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#GmapsAPI"/>
+        <hasMethod rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#GET_Gmaps"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#Gplaces -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Gplaces">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Property"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gplaces</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#GplacesAPI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#GplacesAPI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#URL"/>
+        <hasStringValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://maps.googleapis.com/maps/api/place/details/json?placeid={0}&amp;key={1}</hasStringValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#GplacesService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#GplacesService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Service"/>
+        <aboutProperty rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Gplaces"/>
+        <hasAPIURL rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#GplacesAPI"/>
+        <hasMethod rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#GET_Gplaces"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#Latitude -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Latitude">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#BodyField"/>
+        <hasDataType rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">latitude</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#Latitude_Destination -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Latitude_Destination">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#BodyField"/>
+        <hasDataType rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">latitude_destination</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#Longitude -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Longitude">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#BodyField"/>
+        <hasDataType rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">longitude</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#Longitude_Destination -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Longitude_Destination">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#BodyField"/>
+        <hasDataType rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Decimal"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">longitude_destination</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#Number -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Number">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#DataType"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">number</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#Openweather -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Openweather">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Property"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Openweather</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#OpenweatherAPI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#OpenweatherAPI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#URL"/>
+        <hasStringValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http//api.​​openweathermap.org/data/2.5/weather?lat={0}&amp;lon={1}&amp;appid={2}&amp;units=metric</hasStringValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#OpenweatherService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#OpenweatherService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Service"/>
+        <aboutProperty rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Openweather"/>
+        <hasAPIURL rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#OpenweatherAPI"/>
+        <hasMethod rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#GET_Openweather"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#String -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#String">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#DataType"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ca.mendoza968/ontologies/services#Value -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Value">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#BodyField"/>
+        <hasDataType rdf:resource="http://www.semanticweb.org/ca.mendoza968/ontologies/services#String"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">value</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Create"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Delete"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Read"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ca.mendoza968/ontologies/services#Update"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
